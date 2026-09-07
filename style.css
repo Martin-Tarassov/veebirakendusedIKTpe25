@@ -1,0 +1,157 @@
+/*kommentataar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: lightcoral; /*teksti värv*/
+    background-color: dimgrey; /*tausta värv*/
+}
+header{
+    padding: 20px 5%;
+    background-color: dimgrey;
+    border-left: 3px solid lightcoral;
+    border-bottom: 3px dotted lightcoral;
+    border-radius: 0 0 0 60px;
+    background-image:url('pilt.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+footer{
+    padding: 5%;
+    background-color: dimgrey;
+    border-left: 3px solid lightcoral;
+    border-top: 3px dotted lightcoral;
+    border-radius: 60px 0 0 0;
+    clear: both;
+}
+section#osa1{
+    padding: 5%;
+    border: 10px solid lightcoral; /*dotted, dashes, double, outline, groove*/
+    margin: 5px;
+    width: 25%;
+    /*
+    kirjuta iga section (osa 3, osa4, osa5)
+    oma kujundusega, mis kasutab erinevaid ääriseid,
+    värvi raam võiks olla ainult ühelt poolt jne
+    */
+}
+section#osa2{
+    padding: 5%;
+    border-bottom: 4px solid green;
+    margin: 5px;
+    width: 15%;
+
+}
+section#osa3{
+    padding: 5%;
+    border-left: 12px solid turquoise;
+    margin: 5px;
+    width: 15%;
+}
+
+section#osa4{
+    padding: 5%;
+    border-right: 7px solid crimson;
+    margin: 5px;
+    width: 15%;
+}
+
+section#osa5{
+    padding: 5%;
+    border-top: 3px solid chartreuse;
+    margin: 5px;
+    width: 15%;
+}
+
+img#erapilt{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid lightcoral;
+}
+/*navigeerimis menüü*/
+nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: lightcoral;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    color: dimgray;
+    text-decoration: none; /*link on alljoonita*/
+    text-align: center; /*teeksti joondamine keskel*/
+    padding: 10px;
+    border-left: 3px solid lightcoral;
+    border-radius: 6%;
+}
+
+nav{
+    padding: 10px 5%;
+    margin-bottom: 20px;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.media-grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section#pildigalerii{
+    box-sizing: border-box;
+    padding: 3%;
+    border: 2px solid lightcoral;
+    margin: 1%;
+    width: 45%;
+}
+
+section#video{
+    box-sizing: border-box;
+    padding: 3%;
+    border: 5px solid green;
+    margin: 1%;
+    width: 45%;
+}
+
+section#muusika{
+    box-sizing: border-box;
+    padding: 3%;
+    border: 6px solid turquoise;
+    margin: 1%;
+    width: 45%;
+}
+
+section#kaart{
+    box-sizing: border-box;
+    padding: 3%;
+    border: 4px solid crimson;
+    margin: 1%;
+    width: 45%;
+}
+
+section#pildigalerii img{
+    width: 31%;
+    margin: 1%;
+    float: left;
+    box-sizing: border-box;
+}
+
+section#pildigalerii::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+section iframe{
+    width: 600%;
+    height: 1000px;
+    max-width: 100%;
+}
