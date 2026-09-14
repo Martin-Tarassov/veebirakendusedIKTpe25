@@ -1,9 +1,18 @@
+h1#lipud{
+    position: absolute;
+    top: 10%;
+    left:500%;
+}
+
 #eesti{
     width: 330px;
     height:210px;
     border: 1px solid grey;
     border-spacing: 0;
     /*border-collapse: collapse;*/
+    position: absolute;
+    top: 60px;
+    left: 50%;
 }
 #eesti tr:nth-child(1){
     background-color: blue;
@@ -14,5 +23,70 @@
 }
 
 #eesti tr:nth-child(3){
+    background-color: white;
+}
+
+#rootsi{
+    width: 330px;
+    height:210px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    position: absolute;
+    top: 400px;
+    left: 50%;
+}
+
+#rootsi td {
+    border: none;
+    padding: 0;
+}
+
+#rootsi tr:nth-child(2){
+    background-color: gold;
+    height: 50px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(1),
+#rootsi tr:nth-child(3) td:nth-child(1){
+    background-color: blue;
+    width: 100px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(3),
+#rootsi tr:nth-child(3) td:nth-child(3){
+    background-color: blue;
+    width: 175px;
+}
+
+#rootsi tr:nth-child(1) td:nth-child(2),
+#rootsi tr:nth-child(3) td:nth-child(2){
+    background-color: gold;
+}
+
+
+#sveits {
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    border-spacing: 0;
+    position: absolute;
+    top: 840px;
+    left: 50%;
+    background-color: #D52B1E;
+}
+
+#sveits td {
+    border: none;
+    padding: 0;
+    width: 33%;
+}
+
+#sveits tr {
+    height: 33%;
+}
+
+#sveits tr:nth-child(1) td:nth-child(2),
+#sveits tr:nth-child(2) td,
+#sveits tr:nth-child(3) td:nth-child(2) {
     background-color: white;
 }
