@@ -1,0 +1,61 @@
+table{
+    border: 1px solid blue;
+    width: 30%;
+    height: 200px;
+}
+td{
+    border: 1px solid blue;
+    text-align: center;
+}
+
+table#sinine {
+    border: 1px solid blue;
+    width: 30%;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+table#sinine td {
+    border: 1px solid blue;
+    text-align: center;
+}
+
+table#punane{
+    border: 1px solid green;
+    width: 40%;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+table#punane td{
+    border: 1px solid red;
+    text-align: center;
+}
+
+table#roheline{
+    border: 1px solid green;
+    width: 20%;
+    height: 100px;
+    border-collapse: collapse;
+}
+
+table#roheline td{
+    border: 1px solid red;
+    text-align: center;
+}
+
+/*pseudoelementide kassutamine*/
+/*1.rida 1. lahter*/
+#sinine tr:nth-child(1) td:nth-child(1){
+    background-color: red;
+}
+
+/*1.rida 2. lahter*/
+#sinine tr:nth-child(1) td:nth-child(2){
+    background-color: yellow;
+}
+
+/*2.rida */
+#sinine tr:nth-child(2) {
+    background-color: grey;
+}
