@@ -1,0 +1,26 @@
+div#selgitus{
+    background-color: lightgray;
+    width:30%;
+    position: absolute;
+    top:200px;
+    left:350px;
+    padding:5%;
+}
+img{
+    border: 3px solid lightgray;
+    border-radius: 60%;
+}
+
+a.tagasi {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.tagasi:hover {
+    background-color: #555;
+}
