@@ -1,18 +1,20 @@
-div#selgitus{
-    background-color: lightgray;
-    width:30%;
-    position: absolute;
-    top:200px;
-    left:350px;
-    padding:5%;
-}
-img{
+img {
     border: 3px solid lightgray;
-    border-radius: 60%;
+    vertical-align: top;
+}
+
+div#selgitus {
+    background-color: lightgray;
+    width: 30%;
+    padding: 5%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
 }
 
 a.tagasi {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #333;
