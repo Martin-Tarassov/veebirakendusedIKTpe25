@@ -86,16 +86,76 @@
         </tr>
         <tr>
             <td>
-                <label for "kuupäev">Millal oli su viimane trenn?</label>
+                <label for="kuupaev">Millal oli su viimane trenn?</label>
             </td>
             <td>
                 <input type="date" id="kuupaev" min="">
             </td>
         </tr>
-        <tr>
 
+        <!-- Kohustuslikud sisestusväljad -->
+        <tr>
+            <td>
+                <label for="telefon">Telefoninumber:</label>
+            </td>
+            <td>
+                <input type="tel" id="telefon" name="telefon" placeholder="51234567">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fail">Laadi üles fail:</label>
+            </td>
+            <td>
+                <input type="file" id="fail" name="fail">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="parool">Parool:</label></td>
+            <td><input type="password" id="parool" name="parool"></td>
         </tr>
 
+        <!-- täiendavat sisestusvälja omal valikul -->
+        <tr>
+            <td>
+                <label for="vanus">Vanus:</label>
+            </td>
+            <td>
+                <input type="number" id="vanus" name="vanus" min="1" max="120">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="meil">E-post:</label>
+            </td>
+            <td>
+                <input type="email" id="meil" name="meil">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="koormus">Treeningkoormus:</label>
+            </td>
+            <td>
+                <input type="range" id="koormus" name="koormus" min="1" max="10">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="tingimused">Nõustun kasutustingimustega:</label>
+            </td>
+            <td>
+                <input type="checkbox" id="tingimused" name="tingimused">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="otsing">Otsi spordiklubi:</label>
+            </td>
+            <td>
+                <input type="search" id="otsing" name="otsing">
+            </td>
+        </tr>
     </table>
 </form>
 
