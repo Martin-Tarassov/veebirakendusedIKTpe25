@@ -30,6 +30,17 @@ function muusikValik(){
     vastus1.style.color="green";
     return valik;
 }
+
+//0
+function nimiLugemine(){
+    let nimi=document.getElementById("nimi");
+    let vastus=document.getElementById("vastus");
+
+    vastus.innerHTML="Tere, "+nimi.value;
+    vastus.style.color="red";
+    return nimi.value;
+}
+
 //2
 function arvamusLugemine(){
     let arvamus=document.getElementById("arvamus");
@@ -91,6 +102,7 @@ function stiilValik(){
 //7
 function saada(){
     let kokkuvote=document.getElementById("kokkuvote");
+    let nimi=nimiLugemine();
     let muusikud=muusikValik();
     let arvamus=arvamusLugemine();
     let tunnid=tunnidLugemine();
@@ -99,6 +111,7 @@ function saada(){
     let stiil=stiilValik();
 
     kokkuvote.innerHTML='<strong>Kokkuvõte:</strong><br>'
+        +'Nimi: '+nimi+'<br>'
         +'Muusikud: '+muusikud+'<br>'
         +'Arvamus koolis muusika kuulamisest: '+arvamus+'<br>'
         +'Kuulan muusikat '+tunnid+' tundi päevas<br>'
@@ -108,6 +121,7 @@ function saada(){
 }
 //8
 function puhasta(){
+    vastus.innerHTML="";
     vastus1.innerHTML="";
     vastus2.innerHTML="";
     vastus3.innerHTML="";

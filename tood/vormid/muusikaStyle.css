@@ -1,0 +1,23 @@
+h1{
+    color: gold;
+}
+
+table{
+    border: 3px solid lightcoral;
+    border-radius: 0 20px 0 20px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: linen;
+}
+
+th{
+    background-color: lightcoral;
+    color: dimgrey;
+    padding: 10px;
+}
+
+td{
+    border-bottom: 2px dotted lightcoral;
+    padding: 8px;
+    color: lightcoral;
+}

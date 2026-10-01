@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Muusika küsitlus</title>
     <script src="../js/muusikaScript.js"></script>
+    <link rel="stylesheet" href="muusikaStyle.css">
 </head>
 <body>
 <h1>Muusika küsitlus</h1>
@@ -12,6 +13,19 @@
         <tr>
             <th>Küsimused</th>
             <th>Vastused</th>
+            <th>Nimi</th>
+        </tr>
+        <!-- 0 -->
+        <tr>
+            <td>
+                <label for="nimi">Sisesta oma nimi:</label>
+            </td>
+            <td>
+                <input type="text" id="nimi" oninput="nimiLugemine()">
+            </td>
+            <td>
+                <div id="vastus"></div>
+            </td>
         </tr>
         <!-- 1 -->
         <tr>
@@ -112,7 +126,17 @@
 </form>
 
 <!-- THE END -->
-<div id="kokkuvote"></div>
+<table border="1">
+    <tr>
+        <th>Kokkuvõte</th>
+    </tr>
+    <tr>
+        <td>
+            <div id="kokkuvote"></div>
+        </td>
+    </tr>
+</table>
+
 
 </body>
 </html>
