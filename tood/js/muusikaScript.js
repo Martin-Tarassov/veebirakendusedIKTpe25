@@ -62,16 +62,22 @@ function tunnidLugemine(){
 //4
 function raadioValik(){
     let vastus4=document.getElementById("vastus4");
+    let smaili=document.getElementById("smaili");
     let jah=document.getElementById("jah");
     let ei=document.getElementById("ei");
 
     let raadio;
     if(jah.checked){
         raadio=jah.value;
+        smaili.src="smile.png";
+        smaili.style.display="block";
     } else if(ei.checked){
         raadio=ei.value;
+        smaili.src="sad.png";
+        smaili.style.display="block";
     } else {
         raadio="palun vali";
+        smaili.style.display="none";
     }
     vastus4.innerHTML="Raadio kuulamine: "+raadio;
     vastus4.style.color="purple";
@@ -129,4 +135,5 @@ function puhasta(){
     vastus5.innerHTML="";
     vastus6.innerHTML="";
     kokkuvote.innerHTML="";
+    smaili.style.display="none";
 }
