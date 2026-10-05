@@ -4,36 +4,20 @@ body{
 }
 img{
     width: 200px;
-    border: 2pt solid green;
+    border: 2pt solid indianred;
     border-radius: 50%;
 }
 input[type=radio]{
     accent-color: red;
 }
-input[type=button]{
-    width:20%;
-    border: 2pt solid green;
-    padding: 1%;
-    background-color: lightgreen;
-    border-radius: 10px;
-    font-family: Georgia, serif;
-}
 div#vastus{
-    width:auto;
-    border: 2pt solid green;
-    padding: 5px;
-    background-color: lightgreen;
-    border-radius: 10px;
+    background-color: transparent;
+    padding: 0;
 }
 label{
     font-weight: bold;
     padding: 2px;
     margin-right: 10px;
-}
-label:hover{
-    background-color: lightgreen;
-    border: 2pt solid green;
-    border-radius: 10px;
 }
 h1{
     color: midnightblue;
@@ -54,20 +38,4 @@ td{
     border-bottom: 2px dotted indianred;
     padding: 8px;
     color: firebrick;
-}
-input[type=reset]{
-    width:20%;
-    border: 2pt solid #fb0217;
-    padding: 1%;
-    background-color: #ff6c6c;
-    border-radius: 10px;
-    font-family: Georgia, serif;
-}
-input[type=button]:hover{
-    background-color: green;
-    color: white;
-}
-input[type=reset]:hover{
-    background-color: red;
-    color: white;
 }

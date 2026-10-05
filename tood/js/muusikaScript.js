@@ -1,3 +1,12 @@
+//0
+function nimiLugemine(){
+    let nimi=document.getElementById("nimi");
+    let vastus=document.getElementById("vastus");
+
+    vastus.innerHTML="Tere, "+nimi.value;
+    vastus.style.color="red";
+    return nimi.value;
+}
 //1
 function muusikValik(){
     let vastus1=document.getElementById("vastus1");
@@ -30,17 +39,6 @@ function muusikValik(){
     vastus1.style.color="green";
     return valik;
 }
-
-//0
-function nimiLugemine(){
-    let nimi=document.getElementById("nimi");
-    let vastus=document.getElementById("vastus");
-
-    vastus.innerHTML="Tere, "+nimi.value;
-    vastus.style.color="red";
-    return nimi.value;
-}
-
 //2
 function arvamusLugemine(){
     let arvamus=document.getElementById("arvamus");
@@ -68,12 +66,12 @@ function raadioValik(){
 
     let raadio;
     if(jah.checked){
-        raadio=jah.value;
-        smaili.src="smile.png";
+        raadio="jah";
+        smaili.src=jah.value;
         smaili.style.display="block";
     } else if(ei.checked){
-        raadio=ei.value;
-        smaili.src="sad.png";
+        raadio="ei";
+        smaili.src=ei.value;
         smaili.style.display="block";
     } else {
         raadio="palun vali";
@@ -116,8 +114,7 @@ function saada(){
     let jaamad=jaamadLugemine();
     let stiil=stiilValik();
 
-    kokkuvote.innerHTML='<strong>Kokkuvõte:</strong><br>'
-        +'Nimi: '+nimi+'<br>'
+    kokkuvote.innerHTML='Nimi: '+nimi+'<br>'
         +'Muusikud: '+muusikud+'<br>'
         +'Arvamus koolis muusika kuulamisest: '+arvamus+'<br>'
         +'Kuulan muusikat '+tunnid+' tundi päevas<br>'
