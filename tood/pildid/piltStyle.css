@@ -1,0 +1,40 @@
+body{
+    font-family: Georgia, serif;
+    background-color: #fff9e6;
+}
+img{
+    width: 200px;
+    border: 2pt solid green;
+    border-radius: 50%;
+}
+input[type=radio]{
+    accent-color: red;
+}
+input[type=button]{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: lightgreen;
+    border-radius: 10px;
+    font-family: Georgia, serif;
+}
+div#vastus{
+    width:20%;
+    border: 2pt solid green;
+    padding: 1%;
+    background-color: lightgreen;
+    border-radius: 10px;
+    position: absolute;
+    left: 200px;
+    top: 300px;
+}
+label{
+    font-weight: bold;
+    padding: 2px;
+    margin-right: 10px;
+}
+label:hover{
+    background-color: lightgreen;
+    border: 2pt solid green;
+    border-radius: 10px;
+}
