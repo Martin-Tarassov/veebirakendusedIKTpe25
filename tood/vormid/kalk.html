@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Saia kalkulaator</title>
     <script src="../js/saiakalkScript.js"></script>
+    <script src="../js/tempKalk.js"></script>
     <link rel="stylesheet" href="kalkStyle.css">
+    <script src="../js/valuutaScript.js"></script>
+    <script src="../js/kyttekalkScript.js"></script>
 </head>
 <body>
 <h1>Kalkulaatorid</h1>
@@ -25,5 +28,50 @@
 
 <div id="vastus"></div>
 </section>
+<section id="osa2">
+    <h2>Temperatuuri kalkulaator</h2>
+    <label for="temp">Sissesta temperaaturi</label>
+    <input type="number" id="temp" min="-50" max="50" step="1">
+    <br>
+
+    <input type="radio" name="tempValik" id="celsius" value="celsius" onchange="tempTeisendus()">
+    <label for="celsius">&deg;C - Celsius</label>
+    <br>
+    <input type="radio" name="tempValik" id="fahrenheit" value="fahrenheit" onchange="tempTeisendus()">
+    <label for="fahrenheit">&deg;F- Fahrenheit</label>
+    <br>
+    <div id="vastus2"></div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaVHMF3TvKwMgtg-P0MZg8_nLLGMueFe-8PTAc_9EPag&s=10" alt="termomeeter" id="termomeeter">
+</section>
+    <section id="osa3">
+        <h2>Valuuta kalkulaator</h2>
+        <label for="euro">Euro:</label>
+        <input type="number" id="euro" min="1" max="10" step="1" onchange="valuutaScript()">
+        <br>
+        <label for="valuuta"> Kirjuta kuhu teisendame</label>
+        (dollar, juann, ...., ....,)
+        <input type="text" id="valuuta" name="valuuta" oninput="valuutaScript()">
+        <div id="vastus3"></div>
+    </section>
+
+    <section id="osa4">
+        <h2>Kütusekalkulaator</h2>
+        <label for="km">Kilomeetrid:</label>
+        <input type="number" id="km" min="1" max="1000" step="1" onchange="kyttekalk()">
+        <br>
+        <label for="kulu">Kulu (l/100 km):</label>
+        <input type="number" id="kulu" min="1" max="30" step="1" onchange="kyttekalk()">
+        <br>
+        <label for="kyttetyyp">Palun vali </label>
+        <select name="kyttetyyp" id="kyttetyyp" onchange="kyttekalk()">
+            <option value="vali">vali..</option>
+            <option value="bensiin">bensiin 95</option>
+            <option value="diisel">diislikütus</option>
+            <option value="gaas">gaas</option>
+        </select>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdr9qsOFt7lsgKA--I1Lsylf0-lqHRtO4hH1F6uVUGmA&s=10" alt="" id="kyttepilt">
+        <div id="vastus4"></div>
+    </section>
+
 </body>
 </html>

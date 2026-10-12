@@ -1,8 +1,28 @@
-section#osa1{
+body{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+section#osa1 {
     border: 1pt solid black;
     border-radius: 10pt;
     padding: 10pt;
-    width: 30%;
+    width: 40%;
+    margin-bottom: 15pt;
+}
+
+section#osa2 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+    margin-bottom: 15pt;
+}
+img#termomeeter {
+    width: 300px;
+    height: 400px;
+    margin-top: 10px;
 }
 img#pilt{
     border-radius: 50%;
@@ -30,4 +50,23 @@ label:hover{
     border-radius: 10px;
     border: 1pt solid black;
     padding: 2px;
+}
+section#osa3 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+    margin-bottom: 15pt;
+}
+section#osa4 {
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+    margin-bottom: 15pt;
+}
+img#kyttepilt{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
