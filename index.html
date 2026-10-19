@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Martin veebirakenduste aluste tööd</title>
   <link rel="stylesheet" href="style.css">
+  <script src="tood/js/kuupaevaFunktsioonid.js"></script>
 </head>
 <body>
 <!--veebilehe sisu, mis kasutaja näeb-->
@@ -55,6 +56,18 @@
 
 <!--jalus-->
 <footer>
+  <button onclick="kuvaKuupaevJaKell()">täna on</button>
+  <div>
+    <p id="vastus"></p>
+  </div>
+
+  <br>
+
+  <button onclick="synnipaevani()">Minu sünnipäevani</button>
+  <div>
+    <p id="vastus2"></p>
+  </div>
+
   <div>
     Õpilane leht
   </div>
