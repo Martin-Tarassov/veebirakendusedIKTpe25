@@ -50,7 +50,12 @@ let raamatukogu = {
     vanimRaamat() {
         let sorditud = [...this.raamatud].sort((a, b) => a.aasta - b.aasta);
         return sorditud[0];
+    },
+    uueRaamat() {
+        let sorditud = [...this.raamatud].sort((a, b) => b.aasta - a.aasta);
+        return sorditud[0];
     }
+    
 };
 
 console.log("Raamaatukogu");
