@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Joonistamisrakendus canvas-ga</title>
+    <script src="joonisScript.js" defer></script>
+</head>
+<body>
+<h1>Joonistamisrakendus canvas-ga</h1>
+
+<input type="button" value="Puhasta" onclick="puhasta()">
+<br><br>
+<canvas id="tahvel" width="300" height="400" style="border: 1px solid black;"></canvas>
+<br><br>
+
+<input type="button" value="Joon" onclick="sirgeJoon()">
+<input type="button" value="Kolmnurk" onclick="kolmnurk()">
+<input type="button" value="Ristkülik" onclick="ristkylik()">
+<input type="button" value="Ring" onclick="ring()">
+<br>
+<label for="laius">Laius</label>
+<input type="number" min="1" max="300" step="10" value="100" id="laius">
+<br>
+<label for="korgus">Kõrgus</label>
+<input type="number" min="1" max="300" step="10" value="100" id="korgus">
+<br>
+<label for="raadius">Raadius</label>
+<input type="number" min="1" max="150" step="10" value="40" id="raadius" onchange="ring()">
+<input type="button" value="Nägu" onclick="nagu()">
+</body>
+</html>
