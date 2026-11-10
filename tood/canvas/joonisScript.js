@@ -57,12 +57,13 @@ function ring(){
 
     if (tahvel.getContext) {
         let t=tahvel.getContext("2d");
+        t.beginPath();
         t.fillStyle = varv.value;
         t.arc(100, 150, r.value, 0, 2 * Math.PI, true);
         t.fill();
     }
 }
-function nagu() {
+function korvad() {
     const tahvel = document.getElementById("tahvel");
 
     if (tahvel.getContext) {
@@ -85,10 +86,28 @@ function nagu() {
         t.lineTo(220, 150);
         t.lineTo(220, 80);
         t.stroke();
+    }
+}
+function pea() {
+    const tahvel = document.getElementById("tahvel");
+
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.strokeStyle = "black";
+        t.lineWidth = 2;
 
         t.beginPath();
         t.arc(150, 135, 70, 0, 2 * Math.PI, true);
         t.stroke();
+    }
+}
+function silmad() {
+    const tahvel = document.getElementById("tahvel");
+
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.strokeStyle = "black";
+        t.lineWidth = 1;
 
         t.beginPath();
         t.ellipse(120, 120, 20, 20, 0, 0, 2 * Math.PI);
@@ -98,20 +117,6 @@ function nagu() {
         t.ellipse(180, 120, 20, 20, 0, 0, 2 * Math.PI);
         t.stroke();
 
-        t.beginPath();
-        t.moveTo(140, 140);
-        t.lineTo(160, 140);
-        t.lineTo(160, 175);
-        t.lineTo(140, 175);
-        t.lineTo(140, 140);
-        t.stroke();
-
-        t.beginPath();
-        t.moveTo(110, 180);
-        t.lineTo(180, 180);
-        t.stroke();
-
-//silmad
         t.fillStyle = "black";
         t.beginPath();
         t.arc(120, 120, 1.5, 0, 2 * Math.PI, true);
@@ -120,9 +125,38 @@ function nagu() {
         t.arc(180, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
     }
-
 }
+function nina() {
+    const tahvel = document.getElementById("tahvel");
 
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.strokeStyle = "black";
+        t.lineWidth = 2;
+
+        t.beginPath();
+        t.moveTo(140, 140);
+        t.lineTo(160, 140);
+        t.lineTo(160, 175);
+        t.lineTo(140, 175);
+        t.lineTo(140, 140);
+        t.stroke();
+    }
+}
+function suu() {
+    const tahvel = document.getElementById("tahvel");
+
+    if (tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        t.strokeStyle = "black";
+        t.lineWidth = 2;
+
+        t.beginPath();
+        t.moveTo(110, 180);
+        t.lineTo(180, 180);
+        t.stroke();
+    }
+}
 //pilt failist //draw
 function pilt(){
     const tahvel=document.getElementById("tahvel");
