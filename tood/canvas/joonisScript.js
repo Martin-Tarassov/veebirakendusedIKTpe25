@@ -137,8 +137,8 @@ function nina() {
         t.beginPath();
         t.moveTo(140, 140);
         t.lineTo(160, 140);
-        t.lineTo(160, 175);
-        t.lineTo(140, 175);
+        t.lineTo(160, 170);
+        t.lineTo(140, 170);
         t.lineTo(140, 140);
         t.stroke();
     }
