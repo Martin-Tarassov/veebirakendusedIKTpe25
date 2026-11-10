@@ -122,7 +122,7 @@ function silmad() {
         t.arc(120, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
         t.beginPath();
-        t.arc(160, 120, 1.5, 0, 2 * Math.PI, true);
+        t.arc(170, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
     }
 }
