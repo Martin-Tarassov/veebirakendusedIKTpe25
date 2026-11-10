@@ -111,10 +111,29 @@ function nagu() {
         t.lineTo(180, 180);
         t.stroke();
 
+//silmad
         t.fillStyle = "black";
         t.beginPath();
-        t.arc(100, 150, t.value, 0, 2 * Math.PI, true);
+        t.arc(120, 120, 1.5, 0, 2 * Math.PI, true);
+        t.fill();
+        t.beginPath();
+        t.arc(180, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
     }
 
 }
+
+//pilt failist //draw
+function pilt(){
+    const tahvel=document.getElementById("tahvel");
+    if(tahvel.getContext) {
+        let t = tahvel.getContext("2d");
+        const fail=new Image()
+        fail.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKKV-Cv8Y4NDrqQI3BZZZgRXmLDVL6EIMOpwW9nChj1jHkpme9kHwWG-tydeO01mZ55pvNtmJwsCrGlu0wJJoa2Q1WVRkRh6lZ8IfH_oBiZQ&s=10";
+        fail.onload=()=>{
+            t.drawImage(fail, 100, 100, 100, 100);
+        }
+    }
+}
+
+
