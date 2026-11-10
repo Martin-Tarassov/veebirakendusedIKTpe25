@@ -114,7 +114,7 @@ function silmad() {
         t.stroke();
 
         t.beginPath();
-        t.ellipse(180, 120, 20, 20, 0, 0, 2 * Math.PI);
+        t.ellipse(170, 120, 20, 20, 0, 0, 2 * Math.PI);
         t.stroke();
 
         t.fillStyle = "black";
@@ -122,7 +122,7 @@ function silmad() {
         t.arc(120, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
         t.beginPath();
-        t.arc(180, 120, 1.5, 0, 2 * Math.PI, true);
+        t.arc(160, 120, 1.5, 0, 2 * Math.PI, true);
         t.fill();
     }
 }
