@@ -37,5 +37,8 @@ th{
 td{
     border-bottom: 2px dotted indianred;
     padding: 8px;
-    color: firebrick;
+    color: black;
+}
+.viga{
+    background-color: red;
 }
