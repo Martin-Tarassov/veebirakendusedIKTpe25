@@ -1,7 +1,7 @@
 <!DOCTYPE html><!--deklaratsioon et kasutame html5-->
 <!--kommentaar-->
 <html lang="et">
-<head> <!--tehniline info-->
+<head>
   <meta charset="UTF-8">
   <title>Martin veebirakenduste aluste tööd</title>
   <link rel="stylesheet" href="style.css">
@@ -13,24 +13,46 @@
           crossorigin="anonymous"></script>
   <script src="tood/js/kuupaevaFunktsioonid.js"></script>
   <script>
+    function koordLugemine(event, ui){
+      let koht=ui.offset;
+      $('#koordinadid').html('x:'+koht.left+ ' || y: '+koht.top);
+    }
     function leheStart() {
       $('#vasakule').hide();
 
-      // paremale nuppu vajutamine
       $('#paremale').click(function () {
-        $('#tekstikast').animate({left: '200px'}, 1000);
+        $('#osa1').animate({left: '200px'}, 1000);
         $(this).hide();
         $('#vasakule').show();
       });
 
-      // vasaku nuppu vajutamine
       $('#vasakule').click(function () {
-        $('#tekstikast').animate({left: '0px'}, 1000);
+        $('#osa1').animate({left: '0px'}, 1000);
         $(this).hide();
         $('#paremale').show();
       });
 
       $('#erapilt').draggable();
+      $('#erapilt').bind("drag", koordLugemine);
+
+      $('#jaljeriba').addClass('ul_kujundus');
+      $('#jaljeriba li').addClass('li_kujundus');
+
+      $('.vihjemull').mouseover(function (e) {
+        var mull = $(this).attr('title');
+        $(this).attr('title', '');
+        $('body').append('<div id="vihje">' + mull + '</div>');
+        $('#vihje').fadeIn('500');
+        $('#vihje').fadeTo('10', 0.9);
+      }).mousemove(function (e) {
+        $('#vihje').css('top', e.pageY + 10);
+        $('#vihje').css('left', e.pageX + 20);
+      }).mouseout(function () {
+        $(this).attr('title', $('#vihje').html());
+        $('#vihje').fadeOut(300, function () {
+          $(this).remove();
+        });
+      });
     }
   </script>
 </head>
@@ -46,22 +68,27 @@
 <nav>
   <ul>
     <li>
-      <a href="index.html"> Avaleht</a>
+      <a href="index.html" class="vihjemull" title="Tagasi esilehele"> Avaleht</a>
     </li>
     <li>
-      <a href="kontakt.html">Kontakt</a>
+      <a href="kontakt.html" class="vihjemull" title="Minu kontaktandmed">Kontakt</a>
     </li>
     <li>
-      <a href ="tehtud.html">Tehtud tööd</a>
+      <a href ="tehtud.html" class="vihjemull" title="Kõik tehtud tööd on siin">Tehtud tööd</a>
     </li>
     <li>
-      <a href="lingid.html">Kasulikud lingid</a>
+      <a href="lingid.html" class="vihjemull" title="Lingid, mis aitavad õppida">Kasulikud lingid</a>
     </li>
     <li>
-      <a href="meedia.html">Meedia leht</a>
+      <a href="meedia.html" class="vihjemull" title="Pildid ja muu meedia">Meedia leht</a>
     </li>
   </ul>
 </nav>
+
+<ul id="jaljeriba">
+  <li>Avaleht</li>
+</ul>
+
 <!--sisu-->
 <main>
   <section id="osa1">
@@ -81,19 +108,20 @@
     <div>ise tehtud pilt
       <img src ="pilt.png" alt="see on kollane päike" id="erapilt">
     </div>
+    <div id="koordinadid"></div>
   </section>
 </main>
 
 <!--jalus-->
 <footer>
-  <button onclick="kuvaKuupaevJaKell()">täna on</button>
+  <button onclick="kuvaKuupaevJaKell()" class="vihjemull" title="Näitab tänast kuupäeva ja kellaaega">täna on</button>
   <div>
     <p id="vastus"></p>
   </div>
 
   <br>
 
-  <button onclick="synnipaevani()">Minu sünnipäevani</button>
+  <button onclick="synnipaevani()" class="vihjemull" title="Näitab, mitu päeva on sünnipäevani">Minu sünnipäevani</button>
   <div>
     <p id="vastus2"></p>
   </div>

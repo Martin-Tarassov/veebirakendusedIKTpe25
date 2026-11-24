@@ -11,20 +11,6 @@
             crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {
-        })
-        // paremale nuppu vajutamine
-        $('#paremale').click(function () {
-            $('#tekstikast').animate({left: '200px'}, 1000);
-            $(this).hide() ;
-            $('#vasakule').show();
-        });
-        // vasaku nuppu vajutamine
-            $('#vasakule').click(function () {
-                $('#tekstikast').animate({left: '0px'}, 1000);
-                $(this).hide() ;
-                $('#paremale').show();
-            });
         //värvib teksti punase värviga
         function tekstPunaseks() {
             $('#tekstikast').css('color', 'red');
@@ -37,6 +23,26 @@
             $('#koordinadid').html('x:'+koht.left+ ' || y: '+koht.top);
         }
         function leheStart() {
+            // paremale nuppu vajutamine
+            $('#paremale').click(function () {
+                $('#tekstikast').animate({left: '200px'}, 1000);
+            });
+            // vasaku nuppu vajutamine
+            $('#vasakule').click(function () {
+                $('#tekstikast').animate({left: '0px'}, 1000);
+            });
+            // uus: juhendi näitamine ja peitmine
+            $('#naita').click(function () {
+                $('#juhendSisu').slideDown(500);
+            });
+            $('#peida').click(function () {
+                $('#juhendSisu').slideUp(500);
+            });
+            // pealkirja peale klikkides kaob ja tuleb tagasi
+            $('#juhend h2').click(function () {
+                $('#juhendSisu').slideToggle(500);
+            });
+
             $('#tekstikast').mouseenter(tekstPunaseks);
             $('#tekstikast').mouseleave(tekstMustaks);
             $('#tekstikast').draggable();
@@ -44,6 +50,22 @@
             $('#pilt').draggable();
             $('#pilt').bind("drag", koordLugemine);
 
+            // vihjemullid
+            $('.vihjemull').mouseover(function (e) {
+                var mull = $(this).attr('title');
+                $(this).attr('title', '');
+                $('body').append('<div id="vihje">' + mull + '</div>');
+                $('#vihje').fadeIn('500');
+                $('#vihje').fadeTo('10', 0.9);
+            }).mousemove(function (e) {
+                $('#vihje').css('top', e.pageY + 10);
+                $('#vihje').css('left', e.pageX + 20);
+            }).mouseout(function () {
+                $(this).attr('title', $('#vihje').html());
+                $('#vihje').fadeOut(300, function () {
+                    $(this).remove();
+                });
+            });
         }
     </script>
 
@@ -53,6 +75,7 @@
 <header>
     <h1>jQuery kasutamine</h1>
 </header>
+
 <main>
     <section>
         <h2>jQuery CDN</h2>
@@ -63,14 +86,27 @@
             <br>
             Ametlik CDN asub https://releases.jquery.com
         </div>
-        <input type="button" value="paremale" id="paremale">
-        <input type="button" value="vasakule" id="vasakule">
-        <input type="button" value="peida teksti"
+        <input type="button" value="paremale" id="paremale" class="vihjemull" title="Tekst liigub paremale">
+        <input type="button" value="vasakule" id="vasakule" class="vihjemull" title="Tekst liigub tagasi vasakule">
+        <input type="button" value="peida teksti" class="vihjemull" title="Tekst kaob aeglaselt ära"
                onclick="$('#tekstikast').hide(2000)">
-        <input type="button" value="kuva teksti"
-               onclick="$('#tekstikast').show(2000, alert('Kohe kuvab еулые'))">
+        <input type="button" value="kuva teksti" class="vihjemull" title="Tekst tuleb tagasi nähtavale"
+               onclick="$('#tekstikast').show(2000, function(){ alert('Tekst on kuvatud'); })">
+        <input type="button" value="toggle" class="vihjemull" title="Peidab teksti või toob selle tagasi"
+               onclick="$('#tekstikast').toggle(2000)">
 
     </section>
+
+    <section id="juhend">
+        <h2>Juhend</h2>
+        <input type="button" value="Näita" id="naita" class="vihjemull" title="Näitab juhendi teksti">
+        <input type="button" value="Peida" id="peida" class="vihjemull" title="Peidab juhendi teksti">
+        <div id="juhendSisu">
+            <p>nupp „peida“ peidab teksti, „näita“ toob tagasi</p>
+            <p>kliki pealkirjal, et teksti peita või näidata</p>
+        </div>
+    </section>
+
     <div id="koordinadid"></div>
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKKV-Cv8Y4NDrqQI3BZZZgRXmLDVL6EIMOpwW9nChj1jHkpme9kHwWG-tydeO01mZ55pvNtmJwsCrGlu0wJJoa2Q1WVRkRh6lZ8IfH_oBiZQ&s=10" alt="" id="pilt">
 </main>

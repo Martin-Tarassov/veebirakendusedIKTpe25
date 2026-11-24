@@ -5,9 +5,35 @@
   <meta charset="UTF-8">
   <title>Martin veebirakenduste aluste tööd</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+          integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+          crossorigin="anonymous"></script>
+  <script>
+    $(function(){
+      $('#menyy').hide();
+
+      $('#tehtudNupp').click(function(e){
+        e.preventDefault();
+        $('#menyy').slideToggle();
+      });
+
+      $('#jaljeriba').addClass('ul_kujundus');
+      $('#jaljeriba li').addClass('li_kujundus');
+
+      $('#jaljeriba a').hover(function () {
+        $(this).addClass('hover');
+      }, function () {
+        $(this).removeClass('hover');
+      });
+      $('nav a').hover(function () {
+        $(this).addClass('hover');
+      }, function () {
+        $(this).removeClass('hover');
+      });
+    });
+  </script>
 </head>
 <body>
-<!--veebilehe sisu, mis kasutaja näeb-->
 <!--päis-->
 <header>
   <h1>
@@ -23,8 +49,17 @@
     <li>
       <a href="kontakt.html">Kontakt</a>
     </li>
-    <li>
-      <a href="tehtud.html">Tehtud tööd</a>
+    <li class="alammenyy">
+      <a href="tehtud.html" id="tehtudNupp">Tehtud tööd</a>
+      <ul id="menyy">
+        <li><a href="tood/maparea/map.html">Pildikaart (map/area)</a></li>
+        <li><a href="tood/vormid/ankeet.html">Ankeet (vormid)</a></li>
+        <li><a href="tood/vormid/muusikaKysimustik.html">Muusika küsitlus (vormid)</a></li>
+        <li><a href="tood/vormid/kalk.html">Kalkulaatorid</a></li>
+        <li><a href="tood/vormid/raamatud.html">Raamatud</a></li>
+        <li><a href="tood/canvas/joonistamine.html">Canvas</a></li>
+        <li><a href="tood/jQuery/index.html">jQuery</a></li>
+      </ul>
     </li>
     <li>
       <a href="lingid.html">Kasulikud lingid</a>
@@ -34,6 +69,7 @@
     </li>
   </ul>
 </nav>
+
 <!--sisu-->
 <main>
   <section id="osa5">
@@ -56,6 +92,8 @@
       <a href="tood/vormid/raamatud.html">Raamatud</a>
       <br>
       <a href="tood/canvas/joonistamine.html">Canvas</a>
+      <br>
+      <a href="tood/jQuery/index.html">jQuery</a>
 
     </div>
     <p>palun kasuta navigeerimismenüü, et leida info</p>

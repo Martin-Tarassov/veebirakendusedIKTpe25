@@ -16,3 +16,49 @@ img{
     position: relative;
     left: 0;
 }
+#juhend{
+    position: relative;
+    left: 0;
+    width: 400px;
+    border: solid 1px grey;
+    background-color: lightgray;
+    padding: 10px;
+}
+#jaljeriba{
+    position: relative;
+    left: 0;
+    border: solid 1px grey;
+    background-color: lightgray;
+    padding: 5px;
+}
+.ul_kujundus{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+#jaljeriba ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+.li_kujundus{
+    display: inline;
+}
+#jaljeriba ul ul li:before{
+    content: " > ";
+}
+#jaljeriba a{
+    color: darkblue;
+    text-decoration: none;
+}
+#vihje{
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    color: white;
+    font-size: 12px;
+    background-color: black;
+    padding: 5px 25px;
+}

@@ -24,15 +24,11 @@ footer{
     clear: both;
 }
 section#osa1{
+    position: relative;
     padding: 5%;
     border: 10px solid lightcoral; /*dotted, dashes, double, outline, groove*/
     margin: 5px;
     width: 25%;
-    /*
-    kirjuta iga section (osa 3, osa4, osa5)
-    oma kujundusega, mis kasutab erinevaid ääriseid,
-    värvi raam võiks olla ainult ühelt poolt jne
-    */
 }
 section#osa2{
     padding: 5%;
@@ -82,8 +78,8 @@ nav ul li{
 nav ul li a{
     display: block;
     color: dimgray;
-    text-decoration: none; /*link on alljoonita*/
-    text-align: center; /*teeksti joondamine keskel*/
+    text-decoration: none;
+    text-align: center;
     padding: 10px;
     border-left: 3px solid lightcoral;
     border-radius: 6%;
@@ -160,4 +156,20 @@ section iframe{
 }
 #erapilt {
     cursor: move;
+}
+
+nav ul li.alammenyy{
+    position: relative;
+}
+nav ul li ul#menyy{
+    position: absolute;
+    width: 220px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li ul#menyy li{
+    float: none;
+}
+nav a.hover{
+    background-color: greenyellow;
 }
